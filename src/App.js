@@ -3,6 +3,7 @@ import './App.css';
 import GoalList from './components/GoalList/GoalList';
 import NathanList from './components/GoalList/NathanList';
 import NewGoal from './components/NewGoal/NewGoal';
+import ToDoList from './components/GoalList/ToDoList';
 
 const App = () => {
   const [courseGoals, setCourseGoals] = useState([
@@ -17,6 +18,12 @@ const App = () => {
     {id: 'ng3', text: 'Score a phat paying job'},
   ];
 
+  const toDoList = [
+    {id: 'td1', text: 'Go to gym'},
+    {id: 'td2', text: 'Eat lunch'},
+    {id: 'td3', text: 'Go to sleep'},
+  ];
+
   const addNewGoalHandler = (newGoal) => {
     // setCourseGoals(courseGoals.concat(newGoal));
     setCourseGoals((prevCourseGoals) =>  {
@@ -29,8 +36,11 @@ const App = () => {
     <NewGoal onAddGoal={addNewGoalHandler}/>
     <GoalList goals={courseGoals} />
 
-    <h3>Nathan's personal goals</h3>
+    <h2>Nathan's personal goals</h2>
     <NathanList ngoals={nathanGoals} />
+
+    <h2>Nathan's To Do List</h2>
+    <ToDoList tdo={toDoList} />
   </div>
   );
 };
