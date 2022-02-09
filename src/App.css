@@ -1,3 +1,15 @@
-.coarse-goals {
-  text-align: center;
+.goals-todos {
+  text-align: left;
+}
+
+.course-goals {
+  color: black;
+}
+
+.nathan-goals {
+  color: black;
+}
+
+.nathan-todo {
+  color: black;
 }

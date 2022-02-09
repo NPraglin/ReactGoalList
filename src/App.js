@@ -45,18 +45,26 @@ const App = () => {
     }
 
   return (
+  <div className="goals-todos">
+
   <div className="course-goals">
     <h2>Course Goals</h2>
     <NewGoal onAddGoal={addNewGoalHandler}/>
     <GoalList goals={courseGoals} />
+  </div>
 
+  <div className="nathan-goals">
     <h2>Nathan's personal goals</h2>
     <NewNathanGoal onAddNathanGoal={addNewNathanGoalHandler} />
     <NathanList ngoals={nathanGoals} />
+  </div>
 
+  <div className="nathan-todo">
     <h2>Nathan's To Do List</h2>
     <NewToDo onAddToDo={addNewToDoHandler} />
     <ToDoList tdo={toDoList} />
+  </div>
+  
   </div>
   );
 };
