@@ -1,20 +1,20 @@
 import React, { useState } from "react";
-import './NewToDo.css'
+import './NewNathanGoal.css'
 
-const NewToDo = props => {
+const NewNathanGoal = props => {
   let [enteredText, setEnteredText] = useState(' ');
 
-  const addToDoHandler = event => {
+  const addNathanGoalHandler = event => {
     event.preventDefault();
 
-    const newTodo = {
+    const newNathanGoal = {
       id: Math.random().toString(),
       text: enteredText
     };
 
     setEnteredText(' ')
 
-    props.onAddToDo(newTodo);
+    props.onAddNathanGoal(newNathanGoal);
   };
 
   
@@ -24,12 +24,12 @@ const NewToDo = props => {
   }
 
   return (
-    <form className="new-todo" onSubmit={addToDoHandler}>
+    <form className="new-todo" onSubmit={addNathanGoalHandler}>
       <input type="text" value={enteredText} onChange={textChangeHandler} />
-      <button type="submit">Add To Do</button>
+      <button type="submit">Add Personal Goal</button>
     </form>
   );
 
 };
 
-export default NewToDo;
+export default NewNathanGoal;
